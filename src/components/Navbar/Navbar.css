@@ -1,0 +1,64 @@
+.nav-actions {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .nav-actions {
+        position: fixed;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: transparent;
+        backdrop-filter: blur(10px);
+        padding: 0.5rem 0.75rem;
+        display: flex;
+        justify-content: space-around;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        z-index: 1000;
+        margin-bottom: 0rem;
+    }
+    .nav-actions button,
+    .nav-actions a {
+        flex: 1;
+        text-align: center;
+        padding: 0.5rem;
+        font-size: 16px; 
+    }
+}
+
+
+.btn-nav {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--surface); 
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-nav:hover {
+    background: var(--surface2);
+    border-color: var(--accent2);
+    transform: translateX(-2px);
+}
+
+.icon-back::before {
+    content: "←";
+    font-weight: bold;
+}
+.icon-home::before {
+    content: "⌂";
+    font-size: 1.1rem;
+    line-height: 0;
+}
