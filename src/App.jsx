@@ -1,9 +1,13 @@
 import Navbar from "./components/Navbar/Navbar"
+import "./styles/global.css"
+import "./App.css"
 
 function App() {
   return (
     <>
-      <Navbar></Navbar>
+      <div className="container">
+        <Navbar />
+      </div>
     </>
   )
 }
