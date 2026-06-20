@@ -8,7 +8,7 @@ function App() {
     <>
       <div className="container">
         <Navbar />
-        <Exam title="computerArch"/>
+        <Exam title="computerArch" time={60} nums={61}/>
       </div>
     </>
   )
