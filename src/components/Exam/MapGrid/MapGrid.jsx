@@ -4,9 +4,9 @@ export default function MapGrid({ dataset = []}) {
     return (
         <>
             <div className="map-grid" id="node-map">
-                {dataset.map((id) => (
-                    <div className="map-node" id={"node-" + id} key={id}>
-                        {id}
+                {dataset.map((question) => (
+                    <div className="map-node" id={"node-" + question.id} key={question.id}>
+                        {question.id}
                     </div>
                 ))}
             </div>
