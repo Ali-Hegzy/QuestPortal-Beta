@@ -3,15 +3,15 @@ import "./Progress.css"
 export default function ProgressBar() {
     return (
         <>
-            <div class="progress-container">
-                <div class="progress-meta">
-                    <span class="progress-title">Processing Matrix</span>
-                    <span class="progress-ratio" id="ratio-view">
+            <div className="progress-container">
+                <div className="progress-meta">
+                    <span className="progress-title">Processing Matrix</span>
+                    <span className="progress-ratio" id="ratio-view">
                         0 / 0
                     </span>
                 </div>
-                <div class="progress-track">
-                    <div class="progress-fill" id="track-fill"></div>
+                <div className="progress-track">
+                    <div className="progress-fill" id="track-fill"></div>
                 </div>
             </div>
         </>

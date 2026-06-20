@@ -3,23 +3,20 @@ import "./ActionBar.css"
 export default function ActionBar() {
     return (
         <>
-            <div class="action-bar">
+            <div className="action-bar">
                 <button
-                    class="btn-secondary"
-                    id="ctrl-prev"
-                    onclick="navigate(-1)">
+                    className="btn-secondary"
+                    id="ctrl-prev">
                     ← previous
                 </button>
                 <button
-                    class="btn-secondary next"
-                    id="ctrl-next"
-                    onclick="navigate(1)">
+                    className="btn-secondary next"
+                    id="ctrl-next">
                     Next →
                 </button>
                 <button
-                    class="btn-secondary finish"
-                    id="ctrl-fin"
-                    onclick="terminateSession()">
+                    className="btn-secondary finish"
+                    id="ctrl-fin">
                     ✓ Submit
                 </button>
             </div>

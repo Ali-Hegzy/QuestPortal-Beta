@@ -3,18 +3,18 @@ import "./TopPanal.css"
 export default function TopPanal({ title }) {
     return (
         <>
-            <div class="top-panel">
-                <div class="panel-left">// {title}</div>
-                <div class="panel-center">
-                    <div class="timer" id="clock">
+            <div className="top-panel">
+                <div className="panel-left">// {title}</div>
+                <div className="panel-center">
+                    <div className="timer" id="clock">
                         --:--
                     </div>
                 </div>
-                <div class="panel-right">
-                    <span class="live-pill ok" id="live-ok">
+                <div className="panel-right">
+                    <span className="live-pill ok" id="live-ok">
                         ✓ 0
                     </span>
-                    <span class="live-pill bad" id="live-bad">
+                    <span className="live-pill bad" id="live-bad">
                         ✗ 0
                     </span>
                 </div>
