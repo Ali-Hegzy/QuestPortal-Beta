@@ -1,33 +1,7 @@
 /* ================================================================
    DYNAMIC THEME MAPPING & CORE VARIABLES (INHERITED FROM GLOBAL)
    ================================================================ */
-:root {
-    /* ربط مباشر بمتغيرات global.css لتوحيد الألوان */
-    --bg: var(--bg);
-    --surface: var(--surface);
-    --surface2: var(--surface2);
-    --border: var(--border);
-    --accent: var(--accent);
-    --text: var(--text);
-    --text-muted: var(--muted);
 
-    /* ألوان بنيوية خاصة بنظام الاختبارات وعمق التصميم */
-    --surface3: #1f2444;
-    --border2: rgba(255, 255, 255, 0.12);
-    --accent-dim: rgba(108, 99, 255, 0.15);
-
-    /* ألوان الحالات والتحقق مأخوذة من الهوية القياسية للموقع */
-    --green: var(--drive-color);
-    --green-dim: rgba(34, 211, 160, 0.15);
-    --red: #f43f5e;
-    --red-dim: rgba(244, 63, 94, 0.15);
-    --orange: #f59e0b;
-    --orange-dim: rgba(245, 158, 11, 0.15);
-
-    --text-dim: #a3a9cc;
-    --radius: 16px;
-    --radius-sm: 8px;
-}
 
 /* [تم حذف قواعد * و body و body::after و الـ Fonts]
    لأنها مجهزة مسبقاً في ملف global.css وتعمل تلقائياً بمجرد الاستدعاء.
@@ -159,194 +133,12 @@
     display: none;
 }
 
-.top-panel {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 1rem 1.5rem;
-    margin-bottom: 1.5rem;
-    gap: 1rem;
-}
-.panel-left {
-    font-family: monospace;
-    font-size: 0.75rem;
-    color: var(--text-muted);
-}
-.panel-center {
-    text-align: center;
-}
-.timer {
-    font-family: monospace;
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: var(--text);
-}
-.timer.warn {
-    color: var(--orange);
-}
-.timer.danger {
-    color: var(--red);
-    animation: pulse 0.6s infinite;
-}
-.panel-right {
-    display: flex;
-    gap: 0.5rem;
-    justify-content: flex-end;
-}
-.live-pill {
-    font-family: monospace;
-    font-size: 0.75rem;
-    font-weight: 700;
-    padding: 4px 10px;
-    border-radius: 6px;
-}
-.live-pill.ok {
-    background: var(--green-dim);
-    color: var(--green);
-}
-.live-pill.bad {
-    background: var(--red-dim);
-    color: var(--red);
-}
 
 /* Progress Tracker */
-.progress-container {
-    margin-bottom: 1.5rem;
-}
-.progress-meta {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0.5rem;
-    font-size: 0.75rem;
-}
-.progress-title {
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--text-dim);
-    font-weight: 700;
-}
-.progress-ratio {
-    font-weight: 700;
-    color: var(--text);
-}
-.progress-track {
-    height: 6px;
-    background: var(--surface2);
-    border-radius: 100px;
-    overflow: hidden;
-}
-.progress-fill {
-    height: 100%;
-    background: linear-gradient(90deg, var(--accent), #a855f7);
-    width: 0%;
-    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
 
 /* Navigation Map Grid */
-.map-grid {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 1rem;
-    margin-bottom: 1.5rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-}
-.map-node {
-    width: 34px;
-    height: 34px;
-    border-radius: var(--radius-sm);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: monospace;
-    font-size: 0.7rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.15s ease;
-    user-select: none;
-    border: 1px solid var(--border2);
-    color: var(--text-muted);
-    background: var(--surface2);
-}
-.map-node:hover {
-    border-color: var(--accent);
-    color: var(--text);
-}
-.map-node.active {
-    border-color: var(--orange);
-    color: var(--orange);
-    background: var(--orange-dim);
-    box-shadow: 0 0 10px rgba(245, 158, 11, 0.2);
-}
-.map-node.correct {
-    border-color: var(--green);
-    color: var(--green);
-    background: var(--green-dim);
-}
-.map-node.wrong {
-    border-color: var(--red);
-    color: var(--red);
-    background: var(--red-dim);
-}
 
 /* Question Card */
-.q-card {
-    background: var(--surface);
-    border: 1px solid var(--border2);
-    border-radius: var(--radius);
-    padding: 2.2rem;
-    margin-bottom: 1.5rem;
-    position: relative;
-    overflow: hidden;
-    animation: fadeInUp 0.3s ease-out;
-}
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(15px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.q-card-header {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 1.2rem;
-}
-.q-type-tag {
-    font-family: monospace;
-    font-size: 0.65rem;
-    font-weight: 700;
-    padding: 3px 8px;
-    border-radius: 4px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-.q-type-tag.mcq {
-    background: var(--accent-dim);
-    color: var(--accent);
-}
-.q-type-tag.tf {
-    background: var(--orange-dim);
-    color: var(--orange);
-}
-
-.q-text {
-    font-size: 1.1rem;
-    font-weight: 600;
-    line-height: 1.6;
-    color: var(--text);
-    margin-bottom: 1.8rem;
-}
 
 /* Interactive Options */
 .options-stack {
@@ -464,49 +256,6 @@
 }
 
 /* Action Navigation Controls */
-.action-bar {
-    display: flex;
-    gap: 0.75rem;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 1rem;
-}
-.btn-secondary {
-    padding: 12px 24px;
-    border-radius: var(--radius-sm);
-    border: 1px solid var(--border2);
-    background: var(--surface);
-    color: var(--text);
-    font-size: 0.9rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.15s;
-    font-family: inherit;
-}
-.btn-secondary:hover:not(:disabled) {
-    border-color: var(--accent);
-    color: var(--accent);
-}
-.btn-secondary:disabled {
-    opacity: 0.35;
-    cursor: not-allowed;
-}
-.btn-secondary.next {
-    background: var(--accent);
-    border-color: var(--accent);
-    color: #fff;
-    margin-left: auto;
-}
-.btn-secondary.next:hover {
-    box-shadow: 0 4px 15px rgba(108, 99, 255, 0.3);
-}
-.btn-secondary.finish {
-    background: var(--green);
-    border-color: var(--green);
-    color: #fff;
-    margin-left: auto;
-    display: none;
-}
 
 /* ---- RESULTS DASHBOARD ---- */
 #results {

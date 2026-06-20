@@ -1,0 +1,47 @@
+.map-grid {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+.map-node {
+    width: 34px;
+    height: 34px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: monospace;
+    font-size: 0.7rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    user-select: none;
+    border: 1px solid var(--border2);
+    color: var(--text-muted);
+    background: var(--surface2);
+}
+.map-node:hover {
+    border-color: var(--accent);
+    color: var(--text);
+}
+.map-node.active {
+    border-color: var(--orange);
+    color: var(--orange);
+    background: var(--orange-dim);
+    box-shadow: 0 0 10px rgba(245, 158, 11, 0.2);
+}
+.map-node.correct {
+    border-color: var(--green);
+    color: var(--green);
+    background: var(--green-dim);
+}
+.map-node.wrong {
+    border-color: var(--red);
+    color: var(--red);
+    background: var(--red-dim);
+}

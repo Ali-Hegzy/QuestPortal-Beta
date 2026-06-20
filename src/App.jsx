@@ -1,4 +1,5 @@
 import Navbar from "./components/Navbar/Navbar"
+import Exam from "./components/Exam/Exam"
 import "./styles/global.css"
 import "./App.css"
 
@@ -7,6 +8,7 @@ function App() {
     <>
       <div className="container">
         <Navbar />
+        <Exam title="computerArch"/>
       </div>
     </>
   )

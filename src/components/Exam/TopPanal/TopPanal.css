@@ -1,0 +1,52 @@
+.top-panel {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+}
+.panel-left {
+    font-family: monospace;
+    font-size: 0.75rem;
+    color: var(--muted);
+}
+.panel-center {
+    text-align: center;
+}
+.timer {
+    font-family: monospace;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text);
+}
+.timer.warn {
+    color: var(--orange);
+}
+.timer.danger {
+    color: var(--red);
+    animation: pulse 0.6s infinite;
+}
+.panel-right {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+}
+.live-pill {
+    font-family: monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+.live-pill.ok {
+    background: var(--green-dim);
+    color: var(--green);
+}
+.live-pill.bad {
+    background: var(--red-dim);
+    color: var(--red);
+}

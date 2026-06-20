@@ -1,0 +1,21 @@
+:root {
+    /* ربط مباشر بمتغيرات global.css لتوحيد الألوان */
+    --text-muted: var(--muted);
+
+    /* ألوان بنيوية خاصة بنظام الاختبارات وعمق التصميم */
+    --surface3: #1f2444;
+    --border2: rgba(255, 255, 255, 0.12);
+    --accent-dim: rgba(108, 99, 255, 0.15);
+
+    /* ألوان الحالات والتحقق مأخوذة من الهوية القياسية للموقع */
+    --green: var(--drive-color);
+    --green-dim: rgba(34, 211, 160, 0.15);
+    --red: #f43f5e;
+    --red-dim: rgba(244, 63, 94, 0.15);
+    --orange: #f59e0b;
+    --orange-dim: rgba(245, 158, 11, 0.15);
+
+    --text-dim: #a3a9cc;
+    --radius: 16px;
+    --radius-sm: 8px;
+}
