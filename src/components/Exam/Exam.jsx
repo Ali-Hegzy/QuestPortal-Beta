@@ -11,7 +11,7 @@ export default function Exam({ title, time, dataset = [] }) {
             <TopPanal title={title} time={time} />
             <ProgressBar nums={dataset.length}/>
             <MapGrid dataset={dataset}/>
-            <Qustion />
+            <Qustion dataset={dataset} />
             <ActionBar />
         </>
     );
