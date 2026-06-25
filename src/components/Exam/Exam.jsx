@@ -7,16 +7,20 @@ import ActionBar from "./ActionBar/ActionBar";
 import "./Exam.css";
 
 export default function Exam({ title, time, dataset = [] }) {
-    const [currQuest,setCurrQuest] = useState(0);
+    const [currQuest, setCurrQuest] = useState(0);
     const length = dataset.length;
 
     return (
         <>
             <TopPanal title={title} time={time} />
-            <ProgressBar nums={dataset.length}/>
-            <MapGrid dataset={dataset}/>
+            <ProgressBar nums={dataset.length} />
+            <MapGrid dataset={dataset} />
             <Qustion quset={dataset[currQuest]} />
-            <ActionBar onSetCurrQuest={setCurrQuest} currQuest={currQuest} size={length - 1}/>
+            <ActionBar
+                onSetCurrQuest={setCurrQuest}
+                currQuest={currQuest}
+                size={length - 1}
+            />
         </>
     );
 }
