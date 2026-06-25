@@ -13,7 +13,7 @@ export default function Exam({ title, time, dataset = [] }) {
     return (
         <>
             <TopPanal title={title} time={time} />
-            <ProgressBar nums={dataset.length} />
+            <ProgressBar length={length} />
             <MapGrid dataset={dataset} />
             <Qustion quset={dataset[currQuest]} />
             <ActionBar
