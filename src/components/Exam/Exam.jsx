@@ -14,7 +14,10 @@ export default function Exam({ title, time, dataset = [] }) {
         <>
             <TopPanal title={title} time={time} />
             <ProgressBar length={length} />
-            <MapGrid dataset={dataset} />
+            <MapGrid
+                onSetCurrQuest={setCurrQuest}
+                dataset={dataset}
+            />
             <Qustion quset={dataset[currQuest]} />
             <ActionBar
                 onSetCurrQuest={setCurrQuest}
