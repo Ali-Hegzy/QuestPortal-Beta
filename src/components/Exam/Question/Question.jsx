@@ -1,7 +1,6 @@
 import "./Question.css";
 
-export default function Qustion({ dataset }) {
-    const quset = dataset[0];
+export default function Qustion({ quset }) {
 
     return (
         <>

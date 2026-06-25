@@ -1,17 +1,19 @@
 import "./ActionBar.css"
 
-export default function ActionBar() {
+export default function ActionBar({ onSetCurrQuest, currQuest, nums}) {
     return (
         <>
             <div className="action-bar">
                 <button
                     className="btn-secondary"
-                    id="ctrl-prev">
+                    id="ctrl-prev"
+                    onClick={() => onSetCurrQuest(currQuest != 0 ? currQuest - 1 : currQuest)}>
                     ← previous
                 </button>
                 <button
                     className="btn-secondary next"
-                    id="ctrl-next">
+                    id="ctrl-next"
+                    onClick={() => onSetCurrQuest(currQuest == (nums - 1) ? currQuest : currQuest + 1)}>
                     Next →
                 </button>
                 <button

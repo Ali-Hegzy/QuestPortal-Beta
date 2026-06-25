@@ -1,3 +1,4 @@
+import { useState } from "react";
 import ProgressBar from "./ProgressBar/ProgressBar";
 import TopPanal from "./TopPanal/TopPanal";
 import MapGrid from "./MapGrid/MapGrid";
@@ -6,13 +7,15 @@ import ActionBar from "./ActionBar/ActionBar";
 import "./Exam.css";
 
 export default function Exam({ title, time, dataset = [] }) {
+    const [currQuest,setCurrQuest] = useState(0);
+
     return (
         <>
             <TopPanal title={title} time={time} />
             <ProgressBar nums={dataset.length}/>
             <MapGrid dataset={dataset}/>
-            <Qustion dataset={dataset} />
-            <ActionBar />
+            <Qustion quset={dataset[currQuest]} />
+            <ActionBar onSetCurrQuest={setCurrQuest} currQuest={currQuest} nums={dataset.length}/>
         </>
     );
 }
