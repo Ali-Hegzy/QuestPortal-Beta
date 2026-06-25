@@ -16,6 +16,7 @@ export default function Exam({ title, time, dataset = [] }) {
             <ProgressBar length={length} />
             <MapGrid
                 onSetCurrQuest={setCurrQuest}
+                currQuest={currQuest}
                 dataset={dataset}
             />
             <Qustion quset={dataset[currQuest]} />
