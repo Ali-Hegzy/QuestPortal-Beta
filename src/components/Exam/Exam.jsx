@@ -2,7 +2,7 @@ import { useState } from "react";
 import ProgressBar from "./ProgressBar/ProgressBar";
 import TopPanal from "./TopPanal/TopPanal";
 import MapGrid from "./MapGrid/MapGrid";
-import Qustion from "./Question/Question";
+import Question from "./Question/Question";
 import ActionBar from "./ActionBar/ActionBar";
 import "./Exam.css";
 
@@ -19,7 +19,7 @@ export default function Exam({ title, time, dataset = [] }) {
                 currQuest={currQuest}
                 dataset={dataset}
             />
-            <Qustion quset={dataset[currQuest]} />
+            <Question quest={dataset[currQuest]} />
             <ActionBar
                 onSetCurrQuest={setCurrQuest}
                 currQuest={currQuest}
