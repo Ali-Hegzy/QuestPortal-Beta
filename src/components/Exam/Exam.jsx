@@ -8,6 +8,7 @@ import "./Exam.css";
 
 export default function Exam({ title, time, dataset = [] }) {
     const [currQuest,setCurrQuest] = useState(0);
+    const length = dataset.length;
 
     return (
         <>
@@ -15,7 +16,7 @@ export default function Exam({ title, time, dataset = [] }) {
             <ProgressBar nums={dataset.length}/>
             <MapGrid dataset={dataset}/>
             <Qustion quset={dataset[currQuest]} />
-            <ActionBar onSetCurrQuest={setCurrQuest} currQuest={currQuest} nums={dataset.length}/>
+            <ActionBar onSetCurrQuest={setCurrQuest} currQuest={currQuest} size={length - 1}/>
         </>
     );
 }

@@ -1,6 +1,6 @@
 import "./ActionBar.css"
 
-export default function ActionBar({ onSetCurrQuest, currQuest, nums}) {
+export default function ActionBar({ onSetCurrQuest, currQuest, size}) {
     return (
         <>
             <div className="action-bar">
@@ -13,7 +13,7 @@ export default function ActionBar({ onSetCurrQuest, currQuest, nums}) {
                 <button
                     className="btn-secondary next"
                     id="ctrl-next"
-                    onClick={() => onSetCurrQuest(currQuest == (nums - 1) ? currQuest : currQuest + 1)}>
+                    onClick={() => onSetCurrQuest(currQuest == size ? currQuest : currQuest + 1)}>
                     Next →
                 </button>
                 <button
